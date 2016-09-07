@@ -20,8 +20,8 @@ process.stdin.once("data", function(x){
 	  							console.log("Chau")	  						
 							}
 						})
-			
-			console.log(ordenar())
+
+			console.log(ordenar(C))
 
 		})
 	}
@@ -29,7 +29,8 @@ process.stdin.once("data", function(x){
 })
 
 
-
 function ordenar(C){
-	return []
+	return C.sort(function(a, b){return a - b})
+	
 }
+
