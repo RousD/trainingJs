@@ -1,4 +1,4 @@
-console.log("Bievenido. La unica opcion disponible es 1")
+console.log("Bievenido. Las unicas opciones disponibles son 1 y 2")
 
 
 process.stdin.once("data", function(x){
@@ -26,11 +26,36 @@ process.stdin.once("data", function(x){
 		})
 	}
 
+	if (A ==="2"){
+		
+		console.log("Ingrese valores a ordenar de mayor a menor")
+		
+		process.stdin.once("data", function (Z){
+			var B= Z.toString().trim()
+			var C= B.split(",")
+			
+				
+			C.forEach( function seleccionar(item){
+	 						item= parseInt(item)
+	 						if(isNaN (item)){
+	  							console.log("Chau")	  						
+							}
+						})
+
+			console.log(descendente(C))
+
+		})
+	}
+
 })
 
 
 function ordenar(C){
 	return C.sort(function(a, b){return a - b})
-	
+
 }
 
+function descendente(C){
+	return C.sort(function(a, b){return b - a})
+	
+}
