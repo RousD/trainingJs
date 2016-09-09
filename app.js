@@ -1,4 +1,4 @@
-console.log("Bievenido. Las unicas opciones disponibles son 1 y 2")
+console.log("Bievenido. Las unicas opciones disponibles son 1, 2 y 3")
 
 
 process.stdin.once("data", function(x){
@@ -47,6 +47,19 @@ process.stdin.once("data", function(x){
 		})
 	}
 
+if (A ==="3"){
+		
+		console.log("Ingrese la frase a traducir a rosarino")
+		
+		process.stdin.once("data", function (Z){
+			var B= Z.toString().trim()
+			var F= B.split(" ")
+			console.log(rosarinear(F))
+		})
+
+	}
+
+
 })
 
 
@@ -58,4 +71,22 @@ function ordenar(C){
 function descendente(C){
 	return C.sort(function(a, b){return b - a})
 	
+}
+
+function rosarinear(F){
+	var Rosarino= []
+
+	  		F.forEach(function(word){
+            	var R= word.length -1
+	            if (word[R]==="s"){
+	            	Rosarino.push(word.substring(0, word.length -1))
+	            }
+	            else {
+	            	Rosarino.push(word)
+	            }
+
+	  		}) 
+
+			return Rosarino.toString().replace(/,/g, " ")
+
 }
