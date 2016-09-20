@@ -7,11 +7,10 @@ var currentOption= "0"
 process.stdin.on("data", function(x){
 	var userInput= x.toString().trim()
 
-	console.log("elegiste la opcion " + userInput);
 
 	if (currentOption==="1"){
 		opcion1(userInput)
-		currentOption= "0" 
+		currentOption= "0"
 		mostrarRepeticion()
 	}
 	if (currentOption==="2"){
@@ -20,6 +19,7 @@ process.stdin.on("data", function(x){
 		mostrarRepeticion()
 	}
 	if (currentOption==="3"){
+		console.log("calling option 3")
 		opcion3(userInput)
 		currentOption="0"
 		mostrarRepeticion()
@@ -34,18 +34,17 @@ process.stdin.on("data", function(x){
 	}
 	if (currentOption==="0" && userInput==="3"){
 		console.log("Ingrese la frase a traducir a rosarino")
-		currentOption==="3"
+		currentOption="3"
 	}
-	if (userInput==="4"){
-		opcion4(userInput)
+	if (currentOption==="0" && userInput==="4"){
+		console.log("Ha elegido salir del sistema. Adios!")
 		process.exit()
-		currentOption==="4"
 	}
 })
 
 function opcion1(parametro1){
 	var arrayAOrdenar= parametro1.split(",")
-	
+
 	arrayAOrdenar.forEach( function seleccionar(item){
 	 						item= parseInt(item)
 	 						if(isNaN (item)){
@@ -59,7 +58,7 @@ function opcion1(parametro1){
 
 function opcion2(parametro2){
 	var arrayAOrdenar= parametro2.split(",")
-	
+
 	arrayAOrdenar.forEach( function seleccionar(item){
 	 						item= parseInt(item)
 	 						if(isNaN (item)){
@@ -72,7 +71,6 @@ function opcion2(parametro2){
 }
 
 function opcion3(frase){
-	
 	console.log(sortrosarinear.rosarino(frase))
 
 }
@@ -92,6 +90,3 @@ function mostrarRepeticion (){
 	console.log("La accion a sido completada. Para realizar otra accion, elija entre las siguientes:")
 	mostrarOpciones()
 }
-
-
-

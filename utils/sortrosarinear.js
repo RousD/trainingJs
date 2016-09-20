@@ -10,8 +10,7 @@ function rosarinear(F){
 	    	Rosarino.push(word)
 	    }
 
-	}) 
-
+	})
 	return Rosarino.toString().replace(/,/g, " ")
 
 }

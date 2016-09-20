@@ -1,0 +1,28 @@
+{
+  "name": "app2version",
+  "version": "1.0.0",
+  "description": "app for training",
+  "main": "app2version.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RousD/trainingJs.git"
+  },
+  "keywords": [
+    "training"
+  ],
+  "author": "Rocio Doukler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RousD/trainingJs/issues"
+  },
+  "homepage": "https://github.com/RousD/trainingJs#readme",
+  "dependencies": {
+    "mocha": "^3.0.2"
+  }
+}
